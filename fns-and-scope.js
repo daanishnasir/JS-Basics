@@ -20,11 +20,12 @@ function isTyler(name){
 
 
   //Code Here
-function getName(name){
-  prompt(name);
-}
+  function getName(name){
+    var x = prompt('What is your name');
+    return x;
+  }
 
-getName('Daanish');
+  getName();
 //////////////////PROBLEM 3////////////////////
 
 
@@ -33,7 +34,9 @@ getName('Daanish');
 //then alerts "Welcome, " plus whatever the users name is.
 
   //Code Here
-
+function welcome(){
+  alert(getName());
+}
 
 //////////////////PROBLEM 4////////////////////
 
@@ -43,7 +46,7 @@ getName('Daanish');
 //What is the difference between arguments and parameters?
 
   //Answer Here
-
+Arguments are passed into a function after it is being invoked. Parameters are passed into a function as properties.
 
 //////////////////PROBLEM 5////////////////////
 
@@ -53,7 +56,8 @@ getName('Daanish');
 
 
   //Answer Here
-
+'null', 0, undefined, '', false, NaN.
+We can you an if statement  if(test === false)
 
 
 //////////////////PROBLEM 6////////////////////
@@ -63,15 +67,20 @@ getName('Daanish');
 //Create a function called myName that returns your name
 
   //Code Here
+function myName(name){
+  return name;
+}
 
+myName('Daanish')
 
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
+  var newMyName = myName('Daanish');
 
 //Now alert the result of invoking newMyName
-
+alert(newMyName);
 
 
 //////////////////PROBLEM 7////////////////////
@@ -81,9 +90,15 @@ getName('Daanish');
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
+  function outerFn(){
+    function(){
+      return 'Daanish';
+    }
+  }
 
 //Now save the result of invoking outerFn into a variable called innerFn.
-
+var innerFn = outerFn();
   //Code Here
 
 //Now invoke innerFn.
+innerFn();
