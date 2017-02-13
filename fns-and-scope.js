@@ -20,8 +20,11 @@ function isTyler(name){
 
 
   //Code Here
+function getName(name){
+  prompt(name);
+}
 
-
+getName('Daanish');
 //////////////////PROBLEM 3////////////////////
 
 
